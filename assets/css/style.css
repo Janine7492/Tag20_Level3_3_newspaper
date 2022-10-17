@@ -1,0 +1,200 @@
+/* Farben: rgb(233, 233, 224), #333 */
+
+@font-face {
+    font-family: CormorantGaramond-Bold;
+    src: url("../fonts/CormorantGaramond-Bold.ttf");
+}
+
+@font-face {
+    font-family: CormorantGaramond-SemiBold;
+    src: url("../fonts/CormorantGaramond-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: CormorantGaramond-Medium;
+    src: url("../fonts/CormorantGaramond-Medium.ttf");
+}
+
+@font-face {
+    font-family: CormorantGaramond-Regular;
+    src: url("../fonts/CormorantGaramond-Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    background-color: rgb(233, 233, 224);
+    font-family: CormorantGaramond-Medium;
+}
+
+body {
+    padding: 2rem 5rem 0 5rem;
+    width: 100%;
+    display: grid;
+    grid-template: 15% 85% / 80% 20%;
+    grid-template-areas:
+        "header header"
+        "main aside";
+}
+
+/* Headlines */
+
+header>h1 {
+    font-family: CormorantGaramond-Bold;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+main>h1 {
+    font-family: CormorantGaramond-Bold;
+    font-size: 3rem;
+    text-align: center;
+    grid-area: hl;
+}
+
+h2 {
+    font-family: CormorantGaramond-SemiBold;
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: CormorantGaramond-SemiBold;
+    font-size: 2rem;
+}
+
+
+/* Temp */
+/* img {
+    width: 100px;
+} */
+
+/* Header */
+header {
+    grid-area: header;
+}
+
+header section {
+    width: 100%;
+    border-bottom: 3px double black;
+    border-top: 3px double black;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+}
+
+/* Main */
+main {
+    grid-area: main;
+    gap: 1rem;
+    padding: 2rem 0 0 0;
+    display: grid;
+    grid-template: 10% 15% 30% 45% / 25% 25% 50%;
+    grid-template-areas:
+        "hl hl hl"
+        "a1 a2 pic"
+        "a3 a4 pic"
+        "a5 a6 pic";
+}
+
+.a1 {
+    grid-area: a1;
+}
+
+.a2 {
+    grid-area: a2;
+}
+
+.a3 {
+    grid-area: a3;
+}
+
+.a4 {
+    grid-area: a4;
+}
+
+.a5 {
+    grid-area: a5;
+}
+
+.a6 {
+    grid-area: a6;
+}
+
+.pic {
+    grid-area: pic;
+    font-style: italic;
+}
+
+/* .pic figure {
+    width: 100%;
+    height
+} */
+
+.pic figure img {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+main article p {
+    font-size: 1.2rem;
+}
+
+/* Aside */
+aside {
+    grid-area: aside;
+    height: 100%;
+    padding: 2rem 0 0 1rem;
+    display: grid;
+    grid-template-areas: 10% 30% 30% 30%/ 1fr;
+    gap: 1rem;
+    place-items: center right;
+}
+
+aside h2 {
+    font-size: 1.8rem;
+    place-self: center;
+}
+
+aside article {
+    width: 90%;
+    border: 3px double black;
+    display: grid;
+    padding: 0.5rem;
+    place-items: center;
+}
+
+aside>article:nth-of-type(1) p {
+    font-family: CormorantGaramond-Bold;
+    font-size: 4rem;
+    text-align: center;
+}
+
+aside>article:nth-of-type(2) {
+    padding: 0.5rem 1.2rem;
+    text-align: center;
+}
+
+aside>article:nth-of-type(2) p {
+    font-size: 1.2rem;
+}
+
+aside>article:nth-of-type(2) a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4rem;
+}
+
+aside article img {
+    width: 85%;
+    max-height: 90%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
