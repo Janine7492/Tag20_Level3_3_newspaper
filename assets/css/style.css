@@ -54,6 +54,7 @@ header>h1 {
 }
 
 main>h1 {
+    width: 75%;
     font-family: CormorantGaramond-Bold;
     font-size: 3rem;
     text-align: center;
@@ -150,6 +151,10 @@ main {
     margin: 0 auto;
 }
 
+main article {
+    overflow: auto;
+}
+
 main article p {
     font-size: 1.2rem;
 }
@@ -204,4 +209,71 @@ aside article img {
     max-height: 90%;
     object-fit: cover;
     filter: grayscale(100%);
+}
+
+/* Media Queries */
+@media only screen and (max-width:490px) {
+    html {
+        font-size: 5px;
+    }
+
+    body {
+        /* height: min-content; */
+        grid-template: 15% 75% 10%/ 100%;
+        grid-template-areas:
+            "header"
+            "main"
+            "aside";
+    }
+
+    /* header section {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1rem;
+    } */
+
+    header section p {
+        margin: 0.5rem;
+    }
+
+    main h1 {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+}
+
+@media only screen and (max-width:600px) {
+    html {
+        font-size: 7px;
+    }
+
+    header section {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.6rem;
+    }
+
+    header section p {
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width:900px) {
+    aside article:nth-of-type(1) p {
+        font-size: 2rem;
+    }
+
+    main {
+        grid-template: 1fr 2fr 3fr 4fr 4fr / 50% 50%;
+        grid-template-areas:
+            "hl hl"
+            "a1 a2"
+            "a3 a4"
+            "a5 a6"
+            "pic pic";
+    }
 }
